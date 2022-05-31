@@ -36,20 +36,3 @@ resource "okta_authenticator" "okta_email" {
   )
   status = "ACTIVE"
 }
-
-resource "okta_authenticator" "google_otp" {
-  name   = "Google Authenticator"
-  key    = "google_otp"
-  status = "INACTIVE"
-}
-
-resource "okta_authenticator" "security_question" {
-  name = "Security Question"
-  key  = "security_question"
-  settings = jsonencode(
-    {
-      "allowedFor" : "none"
-    }
-  )
-  status = "INACTIVE"
-}
