@@ -1,12 +1,6 @@
 # ------------------------------------------------------------------------------------------
 # All authenticators (referred to as factors before OIE)
 
-resource "okta_authenticator" "webauthn" {
-  name   = "Security Key or Biometric"
-  key    = "webauthn"
-  status = "ACTIVE"
-}
-
 resource "okta_authenticator" "okta_verify" {
   name = "Okta Verify"
   key  = "okta_verify"
