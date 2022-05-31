@@ -49,17 +49,6 @@ resource "okta_authenticator" "google_otp" {
   status = "INACTIVE"
 }
 
-resource "okta_authenticator" "phone_number" {
-  name = "Phone"
-  key  = "phone_number"
-  settings = jsonencode(
-    {
-      "allowedFor" : "none"
-    }
-  )
-  status = "INACTIVE"
-}
-
 resource "okta_authenticator" "security_question" {
   name = "Security Question"
   key  = "security_question"
