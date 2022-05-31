@@ -5,7 +5,7 @@ terraform {
   required_providers {
     okta = {
       source  = "okta/okta"
-      version = "3.28.0"
+      version = "3.27.0"
     }
   }
   cloud {
