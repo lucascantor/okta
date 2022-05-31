@@ -2,20 +2,8 @@
 # All authenticators (referred to as factors before OIE)
 
 resource "okta_authenticator" "okta_verify" {
-  name = "Okta Verify"
-  key  = "okta_verify"
-  settings = jsonencode(
-    {
-      "compliance" : {
-        "fips" : "OPTIONAL"
-      },
-      "channelBinding" : {
-        "style" : "NUMBER_CHALLENGE",
-        "required" : "HIGH_RISK_ONLY"
-      },
-      "userVerification" : "REQUIRED",
-    }
-  )
+  name   = "Okta Verify"
+  key    = "okta_verify"
   status = "ACTIVE"
 }
 
